@@ -25,6 +25,9 @@ const getLogin = ()=>{
           })
         );
       }
+      if(data.LoginData.error === 0){
+        navigation.navigate("userList")
+      }
 }
 
   return (
@@ -75,6 +78,8 @@ const getLogin = ()=>{
           </Text>
         </TouchableOpacity>
       </View>
+
+      {data.LoginData.isLoading && <ActivityIndicator size = "large" />}
     </View>
   );    
 }

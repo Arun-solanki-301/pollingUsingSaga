@@ -8,3 +8,9 @@ export const LOGIN_ERROR= "LOGIN_ERROR";
 export const SIGNUP_REQUEST = "SIGNUP_REQUEST";
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
 export const SIGNUP_ERROR= "SIGNUP_ERROR";
+
+// user lists CONSTANTS 
+
+export const USER_LIST_REQUEST = "USER_LIST_REQUEST";
+export const USER_LIST_SUCCESS = "USER_LIST_SUCCESS";
+export const USER_LIST_ERROR= "USER_LIST_ERROR";

@@ -22,7 +22,7 @@ const signUpReducer = (state = InitialState , action) => {
           isLoading: false,
           isSuccess: true,
           isError: false,
-          ...action.payload.response
+          ...action.payload.response.data
         };
       case constant.SIGNUP_ERROR:
         return {
