@@ -11,9 +11,7 @@ const UserList = ({navigation})=>{
     // const [UserData , setUserData] = useState("");
     const data = useSelector(state => state)
     const dispatch = useDispatch()
-
     console.log(data , "UserList")
-
     useEffect(()=>{
         dispatch(userListRequest())
     } , [])
@@ -23,8 +21,8 @@ const UserList = ({navigation})=>{
 
     return(
       
-        <View style = {{height : "100%", overflow : "scroll"}}>
-            {/* {lodding ? <ActivityIndicator size = "large" color="#1a73e8" style={{marginTop : 20 , position :"relative", top : "50%"}}/> : null} */}
+        // <View style = {{height : "100%", overflow : "scroll"}}>
+            <View>
             <View style = {styles.users}><Text style = {styles.headerText}>UserName</Text><Text style = {styles.headerText} >Role</Text></View>
             <View style = {styles.users}><Text style = {styles.headerText}>UserName</Text><Text style = {styles.headerText} >Role</Text></View>
             <View style = {styles.users}><Text style = {styles.headerText}>UserName</Text><Text style = {styles.headerText} >Role</Text></View>
@@ -39,14 +37,7 @@ const UserList = ({navigation})=>{
             <View style = {styles.users}><Text style = {styles.headerText}>UserName</Text><Text style = {styles.headerText} >Role</Text></View>
             <View style = {styles.users}><Text style = {styles.headerText}>UserName</Text><Text style = {styles.headerText} >Role</Text></View>
             <View style = {styles.users}><Text style = {styles.headerText}>UserName</Text><Text style = {styles.headerText} >Role</Text></View>
-            {/* <FlatList data={UserData} renderItem={({item})=>{
-                return (
-                <View style = {styles.users}>
-                    <Text style = {styles.ItemText}>{item.username}</Text>
-                    <Text style = {styles.ItemText}>{item.role}</Text>
-                </View>
-                )
-            }} /> */}
+           
         </View>
         
        

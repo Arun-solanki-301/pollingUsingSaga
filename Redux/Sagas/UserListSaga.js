@@ -3,8 +3,7 @@ import { userListSuccess , userListError } from "../Actions/actions";
 import axios from "axios";
 
 export function* UserList(action) {
-  console.log(action)
-  const url = `https://secure-refuge-14993.herokuapp.com/list_users`
+  const url = "https://secure-refuge-14993.herokuapp.com/list_users"
   const apiCall = () => {
     return axios.get(url)
   }

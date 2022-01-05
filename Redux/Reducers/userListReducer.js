@@ -10,21 +10,21 @@ const InitialState = {
 const UserListReducer = (state = InitialState , action) => {
     console.log(action)
     switch (action.type) {
-      case constant.LOGIN_REQUEST:
+      case constant.USER_LIST_REQUEST:
         return {
           ...state,
           isLoading: true,
           isSuccess: false,
           isError: false,
         };
-        case constant.LOGIN_SUCCESS:
+        case constant.USER_LIST_SUCCESS:
         return {
           isLoading: false,
           isSuccess: true,
           isError: false,
-          ...action.payload.response
+          ...action.payload.response.data
         };
-      case constant.LOGIN_ERROR:
+      case constant.USER_LIST_ERROR:
         return {
           ...state,
           isLoading: false,

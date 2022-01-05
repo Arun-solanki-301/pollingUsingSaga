@@ -24,10 +24,12 @@ const getLogin = ()=>{
             password : userPassword,
           })
         );
+        if(data.LoginData.isSuccess){
+
+            navigation.navigate("userList")
+        }
       }
-      if(data.LoginData.error === 0){
-        navigation.navigate("userList")
-      }
+      
 }
 
   return (

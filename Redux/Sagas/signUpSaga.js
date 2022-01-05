@@ -3,7 +3,7 @@ import { signUpSuccess , signUpError } from "../Actions/actions";
 import axios from "axios";
 
 export function* Signup(action) {
-  console.log(action)
+
   const url = `https://secure-refuge-14993.herokuapp.com/add_user?username=${action.payload.name}&password=${action.payload.password}&role=${action.payload.name}`
   const apiCall = () => {
     return axios.post(url)
